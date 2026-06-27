@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMA Negeri 1 Gedangan - Mewujudkan Pendidikan Inklusif</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome untuk Icon -->
+    <link rel="stylesheet" href="webb.html">
+    
+    <script>
+        // Konfigurasi Tailwind untuk warna kustom
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e40af', // Biru Tua SMAN
+                        secondary: '#f59e0b', // Kuning/Emas Aksen
+                        accent: '#10b981', // Hijau (Melambangkan Inklusi/Pertumbuhan)
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            /* Pattern untuk hero background */
+            background-color: #f3f4f6;
+            background-image: radial-gradient(#e5e7eb 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Smooth scrolling padding */
+        section { scroll-margin-top: 80px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <!-- Logo Utama Terintegrasi Bulat -->
+                    <div class="flex-shrink-0 flex items-center gap-3">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center border-2 border-primary shadow-lg overflow-hidden p-0.5 transition-transform duration-300 hover:scale-105">
+                            <img src="file:///C:/Users/prisma/Downloads/logo%20inklusi%20sman1g_20260610_141724_0000%20(1).png" alt="logoo">
+                        </div>
+                        <div>
+                            <span class="font-bold text-xl text-primary block leading-tight tracking-tight">SMAN 1</span>
+                            <span class="font-semibold text-xs text-gray-500 tracking-widest">GEDANGAN</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#beranda" class="text-gray-700 hover:text-primary font-medium transition-colors">Beranda</a>
+                    <a href="#visi-misi" class="text-gray-700 hover:text-primary font-medium transition-colors">Visi & Misi</a>
+                    <a href="#tentang-inklusi" class="text-gray-700 hover:text-primary font-medium transition-colors">Filosofi</a>
+                    <a href="#program" class="text-gray-700 hover:text-primary font-medium transition-colors">Program</a>
+                    <a href="#fasilitas" class="text-gray-700 hover:text-primary font-medium transition-colors">Fasilitas Dukungan</a>
+                    <a href="#guru" class="text-gray-700 hover:text-primary font-medium transition-colors">Pendidik</a>
+                    <a href="#galeri" class="text-gray-700 hover:text-primary font-medium transition-colors">Galeri</a>
+                    <a href="#kontak" class="bg-primary text-white px-5 py-2 rounded-full hover:bg-blue-800 transition-colors shadow-md font-medium">Hubungi Kami</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+                <a href="#beranda" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Beranda</a>
+                <a href="#visi-misi" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Visi & Misi</a>
+                <a href="#tentang-inklusi" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Filosofi</a>
+                <a href="#program" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Program</a>
+                <a href="#fasilitas" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Fasilitas</a>
+                <a href="#guru" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Pendidik</a>
+                <a href="#galeri" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md">Galeri</a>
+                <a href="#kontak" class="block px-3 py-2 text-base font-medium text-primary font-bold">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-24 pb-12 md:pt-32 md:pb-24 hero-bg overflow-hidden relative">
+        <!-- Dekorasi latar belakang -->
+        <div class="absolute top-20 right-0 w-64 h-64 bg-secondary opacity-10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-10 w-72 h-72 bg-primary opacity-10 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 text-center md:text-left fade-in">
+                    <span class="inline-block py-1.5 px-4 rounded-full bg-blue-100 text-primary text-xs font-bold tracking-wider uppercase mb-4 border border-blue-200">
+                        Pendidikan Untuk Semua
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                        Pendidikan Tanpa Batas di <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500">SMAN 1 Gedangan</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Kami percaya setiap anak istimewa. SMAN 1 Gedangan berkomitmen penuh menyelenggarakan pendidikan inklusif yang ramah, setara, dan memberdayakan seluruh peserta didik tanpa memandang perbedaan.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#visi-misi" class="bg-primary text-white px-8 py-3.5 rounded-full font-semibold shadow-lg shadow-blue-500/30 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-center">
+                            Pelajari Visi & Misi
+                        </a>
+                        <a href="#program" class="bg-white text-primary border-2 border-primary px-8 py-3.5 rounded-full font-semibold hover:bg-gray-50 hover:-translate-y-1 transition-all duration-300 text-center">
+                            Program Inklusi
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0 relative fade-in" style="animation-delay: 0.2s;">
+                    <!-- Gambar Utama Sekolah -->
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl group border-4 border-white bg-white">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                        <img src="file:///C:/Users/prisma/Downloads/WhatsApp%20Image%202026-06-10%20at%2014.32.51.jpeg" alt="Siswa SMAN 1 Gedangan Belajar Bersama" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700">
+
+                    <!-- Ornamen dekoratif -->
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-secondary rounded-full -z-10 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visi & Misi Section -->
+    <section id="visi-misi" class="py-20 bg-gradient-to-b from-blue-50/50 to-white scroll-margin-top-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Arah & Landasan Kami</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Visi & Misi Sekolah</h2>
+                <div class="w-16 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4 text-base">
+                    *Visi*
+
+"Menjadi lembaga pendidikan menengah yang berkeadilan, menumbuhkan potensi optimal seluruh peserta didik dalam keberagaman, serta berwawasan global."
+
+*Misi:*
+
+1. Menyediakan sarana, prasarana, dan kurikulum yang fleksibel serta aksesibel bagi semua profil belajar siswa.
+
+2. Meningkatkan kompetensi pendidik dan tenaga kependidikan dalam mengimplementasikan strategi pembelajaran inklusif dan akomodasi yang layak.
+
+3. Menciptakan lingkungan sekolah yang aman, nyaman, dan mendukung stimulasi perkembangan emosional serta sosial anak.
+
+4. Menyelenggarakan proses pembelajaran yang berpusat pada siswa dengan menghargai keunikan cara belajar setiap individu.
+
+5. Mengikis sekat perbedaan antar-peserta didik melalui kegiatan kokurikuler dan ekstrakurikuler yang integratif.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+                <!-- Visi Box -->
+                <div class="lg:col-span-5 bg-white rounded-3xl p-8 md:p-10 shadow-xl shadow-blue-500/5 border border-blue-50 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-colors duration-500"></div>
+                    <div>
+                        <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-primary text-2xl mb-8">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Visi Sekolah</h3>
+                        <h4 class="text-2xl md:text-3xl font-extrabold text-gray-900 leading-snug mb-6">
+                            "Berbudi, Berintegritas, dan Berprestasi untuk Mewujudkan Profil Pelajar Pancasila"
+                        </h4>
+                    </div>
+                    <div class="border-t border-gray-100 pt-6 mt-6">
+                        <p class="text-sm text-gray-500 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-accent"></span>
+                            Fokus Utama: Akhlak, Integritas, Diferensiasi & Inklusi
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Misi Box -->
+                <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+                    <h3 class="text-xs font-bold text-secondary uppercase tracking-widest">Misi Kami</h3>
+                    <div class="space-y-4">
+                        <!-- Misi 1 -->
+                        <div class="flex gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div class="w-10 h-10 rounded-xl bg-blue-50 flex-shrink-0 flex items-center justify-center text-primary font-bold">1</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Pembelajaran Berdiferensiasi</h4>
+                                <p class="text-sm text-gray-600">Meningkatkan prestasi akademis dengan pembelajaran yang berpusat pada murid melalui pendekatan adaptif serta penguasaan teknologi informasi.</p>
+                            </div>
+                        </div>
+                        <!-- Misi 2 -->
+                        <div class="flex gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-50 flex-shrink-0 flex items-center justify-center text-accent font-bold">2</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Lingkungan Sekolah Inklusif & Damai</h4>
+                                <p class="text-sm text-gray-600">Menghadirkan ekosistem ramah anak yang bebas dari diskriminasi, kekerasan, serta menjaga nilai kerukunan sebagai Sekolah Toleransi.</p>
+                            </div>
+                        </div>
+                        <!-- Misi 3 -->
+                        <div class="flex gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div class="w-10 h-10 rounded-xl bg-amber-50 flex-shrink-0 flex items-center justify-center text-secondary font-bold">3</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Pengembangan Ruang Sumber Terpadu</h4>
+                                <p class="text-sm text-gray-600">Memaksimalkan bimbingan individual untuk anak berkebutuhan khusus guna mengasah kecakapan hidup dan kemandirian masa depan mereka.</p>
+                            </div>
+                        </div>
+                        <!-- Misi 4 -->
+                        <div class="flex gap-4 p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                            <div class="w-10 h-10 rounded-xl bg-purple-50 flex-shrink-0 flex items-center justify-center text-purple-600 font-bold">4</div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 mb-1">Membentuk Karakter Gotong Royong</h4>
+                                <p class="text-sm text-gray-600">Membudayakan sikap tolong-menolong, empati sosial yang tinggi, dan kolaborasi tanpa batas antar seluruh warga sekolah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofi & Visi Inklusi -->
+    <section id="tentang-inklusi" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Filosofi <span class="text-primary">Inklusi Kami</span></h2>
+                <div class="w-20 h-1.5 bg-secondary mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg">
+                    Di SMAN 1 Gedangan, inklusi bukan sekadar program, melainkan budaya. Kami mendobrak tembok pemisah dan membangun jembatan pemahaman.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-primary text-2xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                        <i class="fas fa-equals"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Kesetaraan Hak</h3>
+                    <p class="text-gray-600">
+                        Setiap individu memiliki hak yang sama untuk mendapatkan pendidikan berkualitas tinggi tanpa diskriminasi bentuk apapun.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center text-accent text-2xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Menghargai Keragaman</h3>
+                    <p class="text-gray-600">
+                        Perbedaan adalah kekayaan. Lingkungan belajar yang heterogen mempersiapkan siswa menghadapi dunia nyata yang beragam.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-shadow duration-300 group">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-secondary text-2xl mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Empati & Kolaborasi</h3>
+                    <p class="text-gray-600">
+                        Membangun karakter siswa yang memiliki rasa empati tinggi, saling tolong menolong, dan mampu berkolaborasi dengan siapa saja.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program & Layanan Khusus -->
+    <section id="program" class="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <!-- Background pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-12 items-center">
+                <div class="lg:w-1/3">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Program Dukungan Pembelajaran</h2>
+                    <p class="text-gray-400 text-lg mb-8">
+                        Kami menyediakan layanan komprehensif untuk memastikan setiap Peserta Didik Berkebutuhan Khusus (PDBK) dapat belajar dengan optimal sesuai potensinya.
+                    </p>
+                    <div class="hidden lg:block w-32 h-2 bg-secondary rounded-full"></div>
+                </div>
+                
+                <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-primary transition-colors">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-secondary text-2xl"><i class="fas fa-chalkboard-user"></i></div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Guru Pembimbing Khusus (GPK)</h4>
+                                <p class="text-gray-400 text-sm">Tim pendidik bersertifikasi yang siap mendampingi PDBK di dalam dan di luar kelas reguler.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-primary transition-colors">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-accent text-2xl"><i class="fas fa-file-signature"></i></div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Kurikulum Adaptif (PPI)</h4>
+                                <p class="text-gray-400 text-sm">Penyusunan Program Pembelajaran Individual (PPI) yang disesuaikan dengan kemampuan dan kebutuhan spesifik siswa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-primary transition-colors">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-blue-400 text-2xl"><i class="fas fa-user-group"></i></div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Peer Tutoring</h4>
+                                <p class="text-gray-400 text-sm">Program pendampingan sebaya yang memupuk rasa kepedulian antar siswa reguler dan PDBK.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-primary transition-colors">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-pink-400 text-2xl"><i class="fas fa-brain"></i></div>
+                            <div>
+                                <h4 class="text-lg font-bold mb-2">Layanan Psikologi</h4>
+                                <p class="text-gray-400 text-sm">Asesmen berkala dan konseling psikologis bekerja sama dengan profesional untuk memantau perkembangan mental siswa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas Aksesibel -->
+    <section id="fasilitas" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Lingkungan Ramah Difabel</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Fasilitas Aksesibel</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Fasilitas Item -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-14 h-14 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-primary text-xl mb-4">
+                        <i class="fa-brands fa-accessible-icon"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-sm md:text-base">Bidang Miring (Ramp)</h4>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-14 h-14 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-primary text-xl mb-4">
+                        <i class="fas fa-restroom"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-sm md:text-base">Toilet Disabilitas</h4>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-14 h-14 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-primary text-xl mb-4">
+                        <i class="fas fa-braille"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-sm md:text-base">Guiding Block</h4>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-14 h-14 mx-auto bg-blue-50 rounded-full flex items-center justify-center text-primary text-xl mb-4">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h4 class="font-bold text-gray-800 text-sm md:text-base">Ruang Sumber Terpadu</h4>
+                </div>
+            </div>
+            
+            <!-- Banner Testimonial/Kutipan -->
+            <div class="mt-16 bg-blue-50 rounded-2xl p-8 md:p-12 border border-blue-100 relative overflow-hidden">
+                <i class="fas fa-quote-left absolute text-8xl text-blue-100/50 top-4 left-4 -z-0"></i>
+                <div class="relative z-10 text-center max-w-4xl mx-auto">
+                    <p class="text-xl md:text-2xl text-gray-700 italic font-medium leading-relaxed mb-6">
+                        "Pendidikan inklusif mengajarkan anak-anak kita bukan tentang bagaimana mentoleransi perbedaan, tetapi bagaimana merangkul dan merayakannya sebagai kekuatan utama kemanusiaan."
+                    </p>
+                    <p class="font-bold text-primary">- Kepala SMAN 1 Gedangan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profil Guru & Tenaga Pendidik -->
+    <section id="guru" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Pilar Utama Pendidikan</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Guru & Pembimbing Kami</h2>
+                <div class="w-16 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Kenali tim pendidik profesional dan bersertifikasi di SMAN 1 Gedangan yang dengan sepenuh hati membimbing setiap potensi kebaikan siswa tanpa terkecuali.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+               
+
+                <!-- Guru 2: Koordinator GPK -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                    <div class="relative overflow-hidden aspect-square bg-emerald-50">
+                        <img src="file:///C:/Users/prisma/Downloads/pak%20ilyas.jpeg" alt="Muchammad Ilyas, S.Pd., M.Pd" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            Koordinator Inklusi
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow text-center">
+                        <h3 class="text-lg font-bold text-gray-900 leading-tight">Muchammad Ilyas, S.Pd., M.Pd</h3>
+                        <p class="text-sm text-accent font-semibold mt-1 mb-3">Koordinator pendidikan inklusi</p>
+                        <p class="text-gray-500 text-xs italic leading-relaxed mb-6 flex-grow">
+                            "Mengenali keunikan setiap anak membantu kita merancang jembatan keberhasilan masa depan mereka."
+                        </p>
+                        <div class="flex justify-center gap-3 border-t border-gray-100 pt-4">
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-50 hover:bg-accent hover:text-white text-gray-400 flex items-center justify-center transition-colors text-sm"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-50 hover:bg-accent hover:text-white text-gray-400 flex items-center justify-center transition-colors text-sm"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru 3: GPK -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                    <div class="relative overflow-hidden aspect-square bg-amber-50">
+                        <img src="file:///C:/Users/prisma/Downloads/WhatsApp%20Image%202026-06-23%20at%2015.10.43.jpeg" alt="Nisa’ul Mutmainah, S.Pd" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            gpk
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow text-center">
+                        <h3 class="text-lg font-bold text-gray-900 leading-tight">Nisa’ul Mutmainah, S.Pd</h3>
+                        <p class="text-sm text-secondary font-semibold mt-1 mb-3">Guru Pembimbing Khusus (GPK)</p>
+                        <p class="text-gray-500 text-xs italic leading-relaxed mb-6 flex-grow">
+                            "Pendidikan emosional dan rasa nyaman adalah kunci agar siswa reguler dan PDBK tumbuh beriringan."
+                        </p>
+                        <div class="flex justify-center gap-3 border-t border-gray-100 pt-4">
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-50 hover:bg-secondary hover:text-white text-gray-400 flex items-center justify-center transition-colors text-sm"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-50 hover:bg-secondary hover:text-white text-gray-400 flex items-center justify-center transition-colors text-sm"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guru 4: GPK -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                    <div class="relative overflow-hidden aspect-square bg-sky-50">
+                        <img src="file:///C:/Users/prisma/Downloads/pak%20wahyu.jpeg" alt="Wahyu Muchammad Fathoni, S.Pd" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            GPK
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow text-center">
+                        <h3 class="text-lg font-bold text-gray-900 leading-tight">Wahyu Muchammad Fathoni, S.Pd</h3>
+                        <p class="text-sm text-blue-500 font-semibold mt-1 mb-3">Guru Pembimbing Khusus (GPK)</p>
+                        <p class="text-gray-500 text-xs italic leading-relaxed mb-6 flex-grow">
+                            "Membelajarkan IPA secara visual dan praktis agar materi sains bisa dicerna semua kemampuan siswa."
+                        </p>
+                        <div class="flex justify-center gap-3 border-t border-gray-100 pt-4">
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-50 hover:bg-blue-500 hover:text-white text-gray-400 flex items-center justify-center transition-colors text-sm"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-50 hover:bg-blue-500 hover:text-white text-gray-400 flex items-center justify-center transition-colors text-sm"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+           <!-- Guru 4: GPK -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+                    <div class="relative overflow-hidden aspect-square bg-amber-50">
+                        <img src="file:///C:/Users/prisma/Downloads/bu%20alvina.jpeg" alt="Alvina Yurizqi Salsabila, S.Psi " class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                            gpk
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow text-center">
+                        <h3 class="text-lg font-bold text-gray-900 leading-tight">Alvina Yurizqi Salsabila, S.Psi</h3>
+                        <p class="text-sm text-secondary font-semibold mt-1 mb-3">Guru Pembimbing Khusus (GPK)</p>
+                        <p class="text-gray-500 text-xs italic leading-relaxed mb-6 flex-grow">
+                            "Pendidikan emosional dan rasa nyaman adalah kunci agar siswa reguler dan PDBK tumbuh beriringan."
+                        </p>
+                        <div class="flex justify-center gap-3 border-t border-gray-100 pt-4">
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-50 hover:bg-secondary hover:text-white text-gray-400 flex items-center justify-center transition-colors text-sm"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-50 hover:bg-secondary hover:text-white text-gray-400 flex items-center justify-center transition-colors text-sm"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Galeri & Dokumentasi -->
+    <section id="galeri" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-accent font-semibold tracking-wider uppercase text-sm">Dokumentasi</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Potret Kebersamaan</h2>
+                <div class="w-16 h-1 bg-secondary mx-auto rounded-full"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Momen-momen indah kebersamaan, pembelajaran, dan kreativitas tanpa batas di lingkungan SMAN 1 Gedangan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                <!-- Foto 1 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-sm aspect-[4/3] cursor-pointer">
+                    <img src="file:///C:/Users/prisma/Downloads/WhatsApp%20Image%202026-06-10%20at%2014.32.39.jpeg" alt="Belajar Bersama" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <h4 class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Belajar Kelompok</h4>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Kolaborasi antar siswa dalam kelas inklusi.</p>
+                    </div>
+                </div>
+
+
+                <!-- Foto 3 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-sm aspect-[4/3] cursor-pointer">
+                    <img src="file:///C:/Users/prisma/Downloads/WhatsApp%20Image%202026-06-10%20at%2014.32.42.jpeg" alt="Olahraga Adaptif" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <h4 class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Olahraga Adaptif</h4>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Kegiatan jasmani yang diikuti semua siswa.</p>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-sm aspect-[4/3] cursor-pointer">
+                    <img src="file:///C:/Users/prisma/Downloads/WhatsApp%20Image%202026-06-10%20at%2014.32.43.jpeg" alt="Pentas Seni" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <h4 class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Pentas Seni</h4>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Menampilkan bakat istimewa secara setara.</p>
+                    </div>
+                </div>
+
+                <!-- Foto 5 (Lebar 2 Kolom di Desktop) -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-sm aspect-[4/3] md:aspect-auto cursor-pointer md:col-span-2">
+                    <img src="c:\Users\prisma\AppData\Local\Packages\5319275A.51895FA4EA97F_cv1g1gvanyjgm\LocalState\sessions\B7E88C5FFF30D98279AC80E46BFEF59E7F6ED4F3\transfers\2026-25\WhatsApp Image 2026-06-10 at 14.42.05.jpeg" alt="Lapangan" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 ease-in-out">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <h4 class="text-white font-bold text-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-300">Upacara Bendera</h4>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Petugas upacara dari berbagai latar belakang siswa bekerja sama.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <button class="inline-flex items-center gap-2 text-primary font-medium hover:text-blue-800 transition-colors group">
+                    Lihat lebih banyak foto 
+                    <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action & Footer -->
+    <footer id="kontak" class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Info Sekolah & Logo Footer -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center border border-primary shadow-md overflow-hidden p-0.5">
+                            <img src="file:///C:/Users/prisma/Downloads/logo%20inklusi%20sman1g_20260610_141724_0000%20(1).png" alt="Logo SMAN 1 Gedangan" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div>
+                            <span class="font-bold text-xl text-gray-900 block leading-tight">SMAN 1</span>
+                            <span class="font-semibold text-xs text-gray-500 tracking-widest">GEDANGAN</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 max-w-sm">
+                        Sekolah Menengah Atas Negeri yang mengedepankan prestasi, karakter, dan komitmen penuh pada penyelenggaraan pendidikan inklusif di Sidoarjo.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Kontak -->
+                <div>
+                    <h4 class="font-bold text-gray-900 mb-4 uppercase text-sm tracking-wider">Hubungi Kami</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-primary mt-1"></i>
+                            <span class="text-gray-600 text-sm">Jl. Raya Gedangan, Sidoarjo, Jawa Timur</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone-alt text-primary"></i>
+                            <span class="text-gray-600 text-sm">(031) 8910819</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span class="text-gray-600 text-sm">@sman1gedangan.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 mt-12 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 SMA Negeri 1 Gedangan. Hak Cipta Dilindungi.</p>
+                <p class="mt-1">Merdeka Belajar, Merdeka Berkreasi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script fungsionalitas -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-lg', 'bg-white/95', 'backdrop-blur-sm');
+                    navbar.classList.remove('shadow-md', 'bg-white');
+                } else {
+                    navbar.classList.add('shadow-md', 'bg-white');
+                    navbar.classList.remove('shadow-lg', 'bg-white/95', 'backdrop-blur-sm');
+                }
+            });
+
+            // Mobile menu toggle
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = btn.querySelector('i');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                if (menu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+
+            // Menutup mobile menu saat link di klik
+            const mobileLinks = menu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                });
+            });
+
+            // Simple fade-in on scroll animation (Intersection Observer)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Ambil elemen anak section utama untuk diberikan animasi scroll halus
+            document.querySelectorAll('section > div > div').forEach(el => {
+                if(!el.classList.contains('fade-in')){
+                    el.style.opacity = '0'; // Sembunyikan dahulu sebelum di-scroll
+                    
+                    const obsv = new IntersectionObserver((entries) => {
+                        entries.forEach(e => {
+                            if(e.isIntersecting) {
+                                e.target.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+                                e.target.style.opacity = '1';
+                                e.target.style.transform = 'translateY(0)';
+                                obsv.unobserve(e.target);
+                            }
+                        });
+                    }, observerOptions);
+                    
+                    el.style.transform = 'translateY(20px)';
+                    obsv.observe(el);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
